@@ -1,16 +1,23 @@
+
+// firebase configuration
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyCLV2XDtzi9CB-99iRK2HojyNND2LAWQB8",
+  authDomain: "portfolio-dfc0e.firebaseapp.com",
+  databaseURL: "https://portfolio-dfc0e-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "portfolio-dfc0e",
+  storageBucket: "portfolio-dfc0e.appspot.com",
+  messagingSenderId: "1020519011017",
+  appId: "1:1020519011017:web:9ac704267a282cc28d3318",
+  measurementId: "G-T6CQVXQC9L"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
-export { app, db };
+export { app, db, analytics};

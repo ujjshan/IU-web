@@ -11,9 +11,6 @@ const handleSubmit = async (e) => {
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
     const submit = () => {
-    setTimeout(() => {
-      console.log("Submitted to firebase");
-    },2000)
   } 
   submit()
     // Add the data to Firestore
@@ -22,7 +19,7 @@ const handleSubmit = async (e) => {
       email,
       message,
     });
-    console.log("Document written with ID: ", docRef.id);
+    console.log("Submitted to firebase with id ", docRef.id);
     // Clear the form fields
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
@@ -30,9 +27,6 @@ const handleSubmit = async (e) => {
   } catch (error) {
     console.error("Error adding document: ", error);
     const submit = () => {
-    setTimeout(() => {
-      console.log("Submitted to firebase");
-    },2000)
   } 
   submit()
   }
@@ -58,7 +52,7 @@ const handleSubmit = async (e) => {
         </ul>
       </nav>
       {/* navbar */}
-      {/* intro */}
+      {/* Home */}
       <header className="grid grid-cols-1 lg:grid-cols-2">
         <div className="image-container" id="home">
           <img src="src\assets\profile.png" className="profile" alt="Profile" />
@@ -84,7 +78,6 @@ const handleSubmit = async (e) => {
           </div>
         </div>
       </header>
-      {/* intro */}
       {/* technical skills*/}
       <div className="work-desc">Technical Skills</div>
       <div className="work">
@@ -95,6 +88,7 @@ const handleSubmit = async (e) => {
         <img src="src\assets\firebase.png" className="firebasse" alt="Firebase" />
       </div>
       {/* technical skills*/}
+    {/* home */}
       {/* testimonial */}
       <div className="testimonial-head" id="testimonial">
         Testimonials
